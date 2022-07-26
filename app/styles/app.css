@@ -1,0 +1,54 @@
+body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+
+}
+
+button {
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.light {
+  font-weight: 300;
+
+}
+
+.links{
+  border-radius: 5px;
+}
+
+.day-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-radius: 2px;
+  border: 1px;
+  border-radius: 10px;
+  border: 2px;
+  border: solid;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.five-days-forecast {
+  display: flex;
+  justify-content: center;
+
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.city-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

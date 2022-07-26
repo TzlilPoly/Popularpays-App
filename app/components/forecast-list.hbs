@@ -1,0 +1,10 @@
+{{#if @forecast}}
+  <h1 class="title">5 day weather forecast:</h1>
+  <div class="five-days-forecast">
+    {{#each @forecast as |day|}}
+      <ul>
+        <ForecastDisplay @forecast={{day}} />
+      </ul>
+    {{/each}}
+  </div>
+{{/if}}

@@ -1,0 +1,11 @@
+<div class="city-search">
+  City Id:
+  <Input  @value={{this.cityId}}
+  />
+<!--  <a href="/forecast/{{this.cityId}}"><button>Submit</button></a>-->
+  <button type="button"
+    {{on "click" this.handleClick}}
+  >
+    Search
+  </button>
+</div>
