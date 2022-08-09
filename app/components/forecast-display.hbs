@@ -1,8 +1,8 @@
-<div class="day-forecast">
-  <span>{{@forecast.date}}</span>
-  <span>{{@forecast.tempMinValue}}°F - {{@forecast.tempMaxValue}}°F</span>
-  <span>Day - {{@forecast.dayIconPhrase}}</span>
-  <img alt="{{@forecast.dayIconPhrase}}" src="/assets/images/weather-icons/{{@forecast.dayIcon}}.svg" />
-  <span>Night - {{@forecast.nightIconPhrase}}</span>
-  <img alt="{{@forecast.nightIconPhrase}}" src="/assets/images/weather-icons/{{@forecast.nightIcon}}.svg"/>
+<div class="day-forecast" data-test-selector='day-forecast'>
+  <span data-test-selector='day-forecast-date' >{{@forecast.date}}</span>
+  <span data-test-selector='day-forecast-temp' >{{@forecast.tempMinValue}}°F - {{@forecast.tempMaxValue}}°F</span>
+  <span data-test-selector='day-forecast-day-description' >Day - {{@forecast.dayIconPhrase}}</span>
+  <img  data-test-selector='day-forecast-day-icon' alt="{{@forecast.dayIconPhrase}}" src="/assets/images/weather-icons/{{@forecast.dayIcon}}.svg" />
+  <span data-test-selector='day-forecast-night-description' >Night - {{@forecast.nightIconPhrase}}</span>
+  <img data-test-selector='day-forecast-night-icon'  alt="{{@forecast.nightIconPhrase}}" src="/assets/images/weather-icons/{{@forecast.nightIcon}}.svg"/>
 </div>

@@ -1,9 +1,15 @@
 <div class="city-search">
-  City Id:
-  <Input  @value={{this.cityId}}
+  <span data-test-selector='search-text'>
+      City Id:
+  </span>
+  <Input
+    @value={{this.cityId}}
+    data-test-selector='search-input'
   />
-<!--  <a href="/forecast/{{this.cityId}}"><button>Submit</button></a>-->
-  <button type="button"
+  <!--  <a href="/forecast/{{this.cityId}}"><button>Submit</button></a>-->
+  <button
+    type="button"
+    data-test-selector='search-button'
     {{on "click" this.handleClick}}
   >
     Search

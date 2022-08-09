@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'weather-app/tests/helpers';
 import { render, pauseTest } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | forecast-list', function (hooks) {
+module('Integration | Component | forecast-display', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
@@ -20,15 +20,14 @@ module('Integration | Component | forecast-list', function (hooks) {
       nightIconPhrase: 'description',
     };
 
-    const data = [day, day, day, day, day];
+    this.set('day', day);
 
-    this.set('data', data);
-
-    await render(hbs`<ForecastList @forecast={{this.data }}/>`);
-    assert.dom(this.element).exists();
+    await render(hbs`<ForecastDisplay @forecast={{this.day}} />`);
     // await pauseTest();
-
-    assert.dom('[data-test-selector="forecast-list-title"]').hasText('5 day weather forecast:');
-    assert.dom('[data-test-selector="day-forecast"]').exists({ count: 5 });
+    assert.dom(this.element).exists();
+    assert.dom('[data-test-selector="day-forecast-date"]').hasText(day.date);
+    assert.dom('[data-test-selector="day-forecast-temp"]').hasText(`${day.tempMinValue}°F - ${day.tempMaxValue}°F`);
+    assert.dom('[data-test-selector="day-forecast-day-description"]').hasText(`Day - ${day.dayIconPhrase}`);
+    assert.dom('[data-test-selector="day-forecast-night-description"]').hasText(`Night - ${day.dayIconPhrase}`);
   });
 });
