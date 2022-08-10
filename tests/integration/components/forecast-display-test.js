@@ -26,8 +26,14 @@ module('Integration | Component | forecast-display', function (hooks) {
     // await pauseTest();
     assert.dom(this.element).exists();
     assert.dom('[data-test-selector="day-forecast-date"]').hasText(day.date);
-    assert.dom('[data-test-selector="day-forecast-temp"]').hasText(`${day.tempMinValue}°F - ${day.tempMaxValue}°F`);
-    assert.dom('[data-test-selector="day-forecast-day-description"]').hasText(`Day - ${day.dayIconPhrase}`);
-    assert.dom('[data-test-selector="day-forecast-night-description"]').hasText(`Night - ${day.dayIconPhrase}`);
+    assert
+      .dom('[data-test-selector="day-forecast-temp"]')
+      .hasText(`${day.tempMinValue}°F - ${day.tempMaxValue}°F`);
+    assert
+      .dom('[data-test-selector="day-forecast-day-description"]')
+      .hasText(`Day - ${day.dayIconPhrase}`);
+    assert
+      .dom('[data-test-selector="day-forecast-night-description"]')
+      .hasText(`Night - ${day.dayIconPhrase}`);
   });
 });

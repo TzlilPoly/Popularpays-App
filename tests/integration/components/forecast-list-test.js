@@ -28,7 +28,9 @@ module('Integration | Component | forecast-list', function (hooks) {
     assert.dom(this.element).exists();
     // await pauseTest();
 
-    assert.dom('[data-test-selector="forecast-list-title"]').hasText('5 day weather forecast:');
+    assert
+      .dom('[data-test-selector="forecast-list-title"]')
+      .hasText('5 day weather forecast:');
     assert.dom('[data-test-selector="day-forecast"]').exists({ count: 5 });
   });
 });

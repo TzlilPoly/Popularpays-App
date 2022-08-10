@@ -31,11 +31,11 @@ export default class ForecastAdapter extends JSONAPIAdapter {
   /*
   get data from json
 * */
-  namespace = 'api';
-
-  buildURL(...args) {
-    console.log('ForecastAdapter', args);
-    // return `${super.buildURL(...args)}.json`;
-    return `api/forecast.json`;
-  }
+  // namespace = 'api';
+  //
+  // buildURL(...args) {
+  //   console.log('ForecastAdapter', args);
+  //   // return `${super.buildURL(...args)}.json`;
+  //   return `api/forecast.json`;
+  // }
 }
